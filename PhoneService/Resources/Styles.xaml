@@ -1,0 +1,44 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <BooleanToVisibilityConverter x:Key="BoolToVis"/>
+    <SolidColorBrush x:Key="PrimaryHueMidBrush" Color="#0097DA"/>
+    <SolidColorBrush x:Key="PrimaryHueLightBrush" Color="#4AB9F5"/>
+    <SolidColorBrush x:Key="PrimaryHueDarkBrush" Color="#006CA1"/>
+    <SolidColorBrush x:Key="AccentHueMidBrush" Color="#0097DA"/>
+
+
+
+
+    <Style TargetType="ComboBox" BasedOn="{StaticResource MaterialDesignFloatingHintComboBox}"/>
+
+
+    
+    <Style x:Key="TitleTextStyle" TargetType="TextBlock">
+        <Setter Property="FontSize" Value="24" />
+        <Setter Property="FontWeight" Value="SemiBold" />
+        <Setter Property="Foreground" Value="#333333" />
+        <Setter Property="Margin" Value="0 0 0 20" />
+    </Style>
+
+    <Style TargetType="TextBlock">
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="FontWeight" Value="Normal" />
+        <Setter Property="Foreground" Value="#555555" />
+        <Setter Property="Margin" Value="0 5 0 0" />
+    </Style>
+
+    <Style  TargetType="TextBox">
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="Foreground" Value="#333333" />
+        <Setter Property="Margin" Value="0 10 0 5" />
+        <Setter Property="Width" Value="250" />
+    </Style>
+
+    <Style TargetType="PasswordBox">
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="Foreground" Value="#333333" />
+        <Setter Property="Margin" Value="0 10 0 5" />
+        <Setter Property="Width" Value="250" />
+    </Style>
+</ResourceDictionary>

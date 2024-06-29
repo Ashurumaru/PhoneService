@@ -1,0 +1,29 @@
+﻿<Page x:Class="PhoneService.Views.Crud.PhoneModelCreateEditPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      mc:Ignorable="d"
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="PhoneModelCreateEditPage">
+
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Margin="10">
+            <Label Content="Бренд:"/>
+            <TextBox x:Name="BrandTextBox" Style="{StaticResource MaterialDesignTextBoxBase}"/>
+
+            <Label Content="Модель:"/>
+            <TextBox x:Name="ModelNameTextBox" Style="{StaticResource MaterialDesignTextBoxBase}"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom" Grid.Row="1" Margin="10,0,0,0">
+            <Button Content="Сохранить" Click="SaveButton_Click" Margin="5" Width="100"/>
+            <Button Content="Назад" Click="CancelButton_Click" Margin="5" Width="100"/>
+        </StackPanel>
+    </Grid>
+</Page>

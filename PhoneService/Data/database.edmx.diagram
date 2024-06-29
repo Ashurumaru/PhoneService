@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="d9a35ae2273f4a03b65611d51f303351" Name="Diagram1">
+        <EntityTypeShape EntityType="PhoneServiceModel.Clients" Width="1.5" PointX="0.75" PointY="4.25" />
+        <EntityTypeShape EntityType="PhoneServiceModel.Employees" Width="1.5" PointX="3.75" PointY="8.125" />
+        <EntityTypeShape EntityType="PhoneServiceModel.MobilePhones" Width="1.5" PointX="3" PointY="4.25" />
+        <EntityTypeShape EntityType="PhoneServiceModel.OrderDetails" Width="1.5" PointX="8.25" PointY="4.5" />
+        <EntityTypeShape EntityType="PhoneServiceModel.Orders" Width="1.5" PointX="6" PointY="4.125" />
+        <EntityTypeShape EntityType="PhoneServiceModel.OrderStatuses" Width="1.5" PointX="3.75" PointY="1.75" />
+        <EntityTypeShape EntityType="PhoneServiceModel.Parts" Width="1.5" PointX="6" PointY="8.5" />
+        <EntityTypeShape EntityType="PhoneServiceModel.PaymentMethods" Width="1.5" PointX="6" PointY="0.75" />
+        <EntityTypeShape EntityType="PhoneServiceModel.Payments" Width="1.5" PointX="8.25" PointY="1.375" />
+        <EntityTypeShape EntityType="PhoneServiceModel.PhoneModels" Width="1.5" PointX="0.75" PointY="1.625" />
+        <EntityTypeShape EntityType="PhoneServiceModel.Roles" Width="1.5" PointX="1.5" PointY="8.875" />
+        <EntityTypeShape EntityType="PhoneServiceModel.ShipmentDetails" Width="1.5" PointX="13.25" PointY="8.25" />
+        <EntityTypeShape EntityType="PhoneServiceModel.Shipments" Width="1.5" PointX="11" PointY="8.125" />
+        <EntityTypeShape EntityType="PhoneServiceModel.Suppliers" Width="1.5" PointX="8.75" PointY="8" />
+        <EntityTypeShape EntityType="PhoneServiceModel.sysdiagrams" Width="1.5" PointX="10.75" PointY="0.75" />
+        <AssociationConnector Association="PhoneServiceModel.FK__MobilePho__Clien__5FB337D6" />
+        <AssociationConnector Association="PhoneServiceModel.FK__Orders__ClientId__4D94879B" />
+        <AssociationConnector Association="PhoneServiceModel.FK__Employees__RoleI__440B1D61" />
+        <AssociationConnector Association="PhoneServiceModel.FK__Orders__Employee__4E88ABD4" />
+        <AssociationConnector Association="PhoneServiceModel.FK__MobilePho__Phone__5EBF139D" />
+        <AssociationConnector Association="PhoneServiceModel.FK__OrderDeta__Order__59FA5E80" />
+        <AssociationConnector Association="PhoneServiceModel.FK__OrderDeta__PartI__5AEE82B9" />
+        <AssociationConnector Association="PhoneServiceModel.FK__Orders__OrderSta__4F7CD00D" />
+        <AssociationConnector Association="PhoneServiceModel.FK__Payments__OrderI__628FA481" />
+        <AssociationConnector Association="PhoneServiceModel.FK_ShipmentDetails_Parts" />
+        <AssociationConnector Association="PhoneServiceModel.FK__Payments__Paymen__6383C8BA" />
+        <AssociationConnector Association="PhoneServiceModel.FK_ShipmentDetails_Shipments" />
+        <AssociationConnector Association="PhoneServiceModel.FK__Shipments__Suppl__52593CB8" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

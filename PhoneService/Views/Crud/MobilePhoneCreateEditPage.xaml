@@ -1,0 +1,38 @@
+﻿<Page x:Class="PhoneService.Views.Crud.MobilePhoneCreateEditPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      mc:Ignorable="d"
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="MobilePhoneCreateEditPage">
+
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Margin="10">
+            <Label Content="Клиент:"/>
+            <ComboBox x:Name="ClientComboBox" DisplayMemberPath="FullName" SelectedValuePath="ClientId"/>
+
+            <Label Content="Модель телефона:"/>
+            <ComboBox x:Name="PhoneModelComboBox" DisplayMemberPath="ModelName" SelectedValuePath="PhoneModelId"/>
+
+            <Label Content="IMEI:"/>
+            <TextBox x:Name="IMEITextBox" Style="{StaticResource MaterialDesignTextBoxBase}"/>
+
+            <Label Content="Дата получения:"/>
+            <DatePicker x:Name="ReceivedDatePicker"/>
+
+            <Label Content="Описание проблемы:"/>
+            <TextBox x:Name="IssueDescriptionTextBox" Style="{StaticResource MaterialDesignTextBoxBase}" AcceptsReturn="True" Height="100"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom" Grid.Row="1" Margin="10,0,0,0">
+            <Button Content="Сохранить" Click="SaveButton_Click" Margin="5" Width="100"/>
+            <Button Content="Назад" Click="CancelButton_Click" Margin="5" Width="100"/>
+        </StackPanel>
+    </Grid>
+</Page>

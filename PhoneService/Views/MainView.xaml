@@ -1,0 +1,134 @@
+﻿<Window x:Class="PhoneService.Views.MainView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PhoneService.Views"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Title="Главное окно" Height="700" Width="1200"
+        WindowStartupLocation="CenterScreen"
+        MouseDown="Window_MouseDown"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        Background="Transparent">
+    <Border Background="White" CornerRadius="10">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="250"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <DockPanel Grid.Row="0" Grid.ColumnSpan="2" Background="{DynamicResource PrimaryHueLightBrush}">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                    <Button Style="{StaticResource MaterialDesignIconButton}" Width="28" Height="28" Click="Minimize_Click">
+                        <materialDesign:PackIcon Kind="WindowMinimize"/>
+                    </Button>
+                    <Button Style="{StaticResource MaterialDesignIconButton}" Width="28" Height="28" Click="Maximize_Click">
+                        <materialDesign:PackIcon Kind="WindowMaximize"/>
+                    </Button>
+                    <Button Style="{StaticResource MaterialDesignIconButton}" Width="28" Height="28" Click="Close_Click">
+                        <materialDesign:PackIcon Kind="WindowClose"/>
+                    </Button>
+                </StackPanel>
+            </DockPanel>
+
+            <Border Grid.Column="0" Grid.Row="1" Background="{DynamicResource PrimaryHueLightBrush}" CornerRadius="0,0,10,0" Margin="0,0,10,0">
+                <Grid>
+                    <StackPanel>
+                        <StackPanel HorizontalAlignment="Center" Margin="20">
+                            <Ellipse Width="50" Height="50" Margin="0,0,10,0">
+                                <Ellipse.Fill>
+                                    <ImageBrush ImageSource="pack://application:,,,/Resources/Images/logo_sevice.png"/>
+                                </Ellipse.Fill>
+                            </Ellipse>
+                            <TextBlock Text="PhoneService" VerticalAlignment="Center" FontSize="20" FontWeight="Bold" Foreground="White"/>
+                        </StackPanel>
+
+                        <Separator Style="{StaticResource MaterialDesignDarkSeparator}" Margin="10,0"/>
+
+                        <Button Click="NavigateToOrders" Style="{StaticResource MaterialDesignFlatButton}" Margin="10">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <materialDesign:PackIcon Kind="ClipboardList" Grid.Column="0" VerticalAlignment="Center"/>
+                                <TextBlock Text="Заказы" Grid.Column="1" VerticalAlignment="Center" Margin="10 0 0 0"/>
+                            </Grid>
+                        </Button>
+                        <Button Click="NavigateToShipments" Style="{StaticResource MaterialDesignFlatButton}" Margin="10">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <materialDesign:PackIcon Kind="TruckDelivery" Grid.Column="0" VerticalAlignment="Center"/>
+                                <TextBlock Text="Поставки" Grid.Column="1" VerticalAlignment="Center" Margin="10 0 0 0"/>
+                            </Grid>
+                        </Button>
+                        <Button Click="NavigateToParts" Style="{StaticResource MaterialDesignFlatButton}" Margin="10">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <materialDesign:PackIcon Kind="Cog" Grid.Column="0" VerticalAlignment="Center"/>
+                                <TextBlock Text="Детали" Grid.Column="1" VerticalAlignment="Center" Margin="10 0 0 0"/>
+                            </Grid>
+                        </Button>
+                        <Button Click="NavigateToClients" Style="{StaticResource MaterialDesignFlatButton}" Margin="10">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <materialDesign:PackIcon Kind="Account" Grid.Column="0" VerticalAlignment="Center"/>
+                                <TextBlock Text="Клиенты" Grid.Column="1" VerticalAlignment="Center" Margin="10 0 0 0"/>
+                            </Grid>
+                        </Button>
+                        <Button Visibility="Collapsed" Name="btnEmpoloyee" Click="NavigateToEmployees" Style="{StaticResource MaterialDesignFlatButton}" Margin="10">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <materialDesign:PackIcon Kind="AccountGroup" Grid.Column="0" VerticalAlignment="Center"/>
+                                <TextBlock Text="Сотрудники" Grid.Column="1" VerticalAlignment="Center" Margin="10 0 0 0"/>
+                            </Grid>
+                        </Button>
+                        <Button Click="NavigateToReports" Style="{StaticResource MaterialDesignFlatButton}" Margin="10">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <materialDesign:PackIcon Kind="ChartLine" Grid.Column="0" VerticalAlignment="Center"/>
+                                <TextBlock Text="Отчеты" Grid.Column="1" VerticalAlignment="Center" Margin="10 0 0 0"/>
+                            </Grid>
+                        </Button>
+                    </StackPanel>
+
+                    <StackPanel VerticalAlignment="Bottom" Margin="10">
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                            <materialDesign:PackIcon Kind="AccountCircle" Width="40" Height="40" Foreground="White" Margin="0 10 0 0"/>
+                            <TextBlock Text="Иван Иванов" Name="txtNameEmployee" FontWeight="Bold" Foreground="White" VerticalAlignment="Center"/>
+                        </StackPanel>
+                        <Button Click="Logout_Click" Style="{StaticResource MaterialDesignFlatButton}" Margin="10">
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                <materialDesign:PackIcon Kind="Logout" Margin="0 0 10 0"/>
+                                <TextBlock Text="Выход" VerticalAlignment="Center" Margin="10 0 0 0"/>
+                            </StackPanel>
+                        </Button>
+                    </StackPanel>
+                </Grid>
+            </Border>
+
+            <Frame x:Name="MainFrame" Grid.Column="1" Grid.Row="1" NavigationUIVisibility="Hidden" />
+        </Grid>
+    </Border>
+</Window>
